@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.bjlz.qianshan">
+    <!-- wifi权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 联网权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 打电话的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission-sdk-23 android:name="android.permission.CALL_PHONE"/>
+    <uses-permission-sdk-23 android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!--唤醒权限-->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!--照相机的权限-->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!--<uses-permission-sdk-23 android:name="android.permission.CAMERA"/>-->
+    <!--蓝牙的权限-->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Android6.0 蓝牙扫描才需要-->
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 短信权限 -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <!-- 在sd卡中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission-sdk-23 android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission-sdk-23 android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS"/>
+    <!-- 读写SD卡的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <!--环信权限-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:name=".CurrencyApplication.MyApplication"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--通用界面-->
+        <!--登录-->
+        <activity android:name=".CurrencyActivities.LoginActivity"/>
+        <!--反馈-->
+        <activity android:name=".CurrencyActivities.FeedBackActivity"/>
+        <!--所有需加载web的界面-->
+        <activity android:name=".CurrencyActivities.WebViewActivity"/>
+        <activity android:name=".Obsessive.activity.WebViewTextActivity"/>
+        <!--图片选择-->
+        <activity android:name=".photoPicker.activity.PhotoPickerActivity"/>
+        <!--图片预览-->
+        <activity android:name=".photoPicker.activity.PhotoPreviewActivity"/>
+        <!--二维码扫描-->
+        <activity android:name=".zbar.CameraScanningActivity"/>
+        <!--个人信息-->
+        <activity android:name=".CurrencyActivities.InformationActivity"/>
+        <!--设置-->
+        <activity android:name=".CurrencyActivities.SettingActivity"/>
+        <!--拨打界面-->
+        <activity android:name=".CurrencyActivities.CallActivity"></activity>
+        <!--聊天界面-->
+        <activity android:name=".CurrencyActivities.ChatActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateVisible|adjustResize"></activity>
+        <!--视频通话-->
+        <activity android:name=".CurrencyActivities.VideoCallActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"></activity>
+        <!--百度地图界面-->
+        <activity android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity"/>
+        <!--语音通话界面-->
+        <activity android:name=".CurrencyActivities.VoiceCallActivity"></activity>
+        <!--视频播放-->
+        <activity android:name=".CurrencyActivities.RecorderVideoActivity"></activity>
+        <!--图片选择-->
+        <activity android:name=".CurrencyActivities.ImageGridActivity"></activity>
+        <!--欢迎-->
+        <activity android:name=".CurrencyActivities.SplashActivity"
+            android:theme="@style/StartAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--医生端界面-->
+        <!--医生主界面-->
+        <activity android:name=".Doctor.activity.DoctorMain"/>
+        <!--患者端界面-->
+        <!--患者主界面-->
+        <activity android:name=".Obsessive.activity.ObsessiveMain"/>
+        <!--药箱-->
+        <activity android:name=".Obsessive.bluetooth.activity.BlueToothActivity"/>
+        <!--血压仪-->
+        <activity android:name=".Obsessive.bluetooth.activity.BloodPressureActivity"/>
+        <!--蓝牙写入读取-->
+        <activity android:name=".Obsessive.bluetooth.activity.ServiceActivity"/>
+        <!--蓝牙列表界面-->
+        <activity android:name=".Obsessive.bluetooth.activity.DeviceListActivity"/>
+        <!--预约诊疗时间-->
+        <activity android:name=".Obsessive.activity.ObsessiveAppointmentActivity"/>
+        <!--一键急救-->
+        <activity android:name=".Obsessive.activity.OneKeySaveActivity"/>
+        <!--添加家庭成员-->
+        <activity android:name=".Obsessive.activity.AddFamilyPeopleActivity"/>
+        <!--家庭成员详情-->
+        <activity android:name=".Obsessive.activity.FamilyPeopleInformationActivity"/>
+        <!--患者详情-->
+        <activity android:name=".Obsessive.activity.UserInformationActivity"/>
+        <!--健康全信息-->
+        <activity android:name=".Obsessive.activity.HealthMessageActivity"/>
+        <!--私人健康报告-->
+        <activity android:name=".Obsessive.activity.HealthReportActivity"/>
+        <!--体检报告-->
+        <activity android:name=".Obsessive.activity.PhysicalExaminationReportActivity"/>
+        <!--问卷调查-->
+        <activity android:name=".Obsessive.activity.QuestionnaireSurveyActivity"/>
+        <!--用户管理-->
+        <activity android:name=".Obsessive.activity.UserManagerActivity"/>
+        <!--患者的健康全信息-->
+        <activity android:name=".Obsessive.activity.UserHealthMessageActivity"/>
+        <!--测试页面-->
+        <activity android:name=".CurrencyActivities.TextActivity"/>
+        <!--医生列表-->
+        <activity android:name=".Obsessive.activity.DoctorChatListActivity"></activity>
+        <!--EaseUI-->
+        <activity android:name="com.hyphenate.easeui.ui.EaseShowNormalFileActivity"></activity>
+        <activity android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity"></activity>
+        <activity android:name="com.hyphenate.easeui.ui.EaseShowVideoActivity"></activity>
+
+        <!-- 设置环信应用的appkey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="814326663#qianshan" />
+        <!-- 声明sdk所需的service -->
+        <!-- 声明sdk所需的service -->
+        <!--<receiver android:name=".CurrencyBroadcastRecivier.CallReceiver"/>-->
+        <!--<receiver android:name=".CurrencyBroadcastRecivier.GCMPushBroadCast"></receiver>-->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true"
+            tools:ignore="ExportedService" />
+        <!-- 声明sdk所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 百度地图所需的service -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="3ecea51f560650b1ed8a4b99808f52e8" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:padding="5dp"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <com.example.bjlz.qianshan.views.CircleImageView
+        android:id="@+id/cimg_tou_xiang"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/logo"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+    <TextView
+
+        android:id="@+id/tv_user_name"
+        android:text="@string/app_name"
+        android:layout_width="0dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center|left"
+        android:layout_weight="1.0"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:gravity="center|left"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/tv_user_mobile"
+        android:text="@string/app_name"
+        android:layout_width="0dp"
+        android:layout_weight="1.0"
+        android:layout_height="wrap_content" />
+    <ImageButton
+        android:layout_marginRight="20dp"
+        android:id="@+id/imgbtn_call"
+        android:background="@drawable/video_call"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+</LinearLayout>

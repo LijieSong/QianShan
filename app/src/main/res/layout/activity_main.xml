@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:my="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+        <include layout="@layout/layout_menu" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/content"
+        xmlns:my="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg" >
+        <com.example.bjlz.qianshan.views.TitleBarView
+            android:layout_width="match_parent"
+            android:id="@+id/title_bar"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/to_do_text_size"
+            android:text="@string/to_do_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:background="@color/devide_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <com.example.bjlz.qianshan.pull.SwipyRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="400dp"
+            my:direction="both">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/v7_recyerview"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.example.bjlz.qianshan.pull.SwipyRefreshLayout>
+        <GridView
+            android:columnWidth="60dp"
+            android:numColumns="3"
+            android:background="@color/transparent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:horizontalSpacing="2dp"
+            android:verticalSpacing="2dp"
+            android:gravity="center"
+            android:listSelector="@color/transparent"
+            android:id="@+id/gridView_kuai_jie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

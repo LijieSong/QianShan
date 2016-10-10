@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:layout_height="match_parent">
+    <com.example.bjlz.qianshan.views.TitleBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.example.bjlz.qianshan.photoPicker.widget.ViewPagerFixed
+        android:layout_below="@id/title_bar"
+        android:id="@+id/vp_photos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <Button
+        android:id="@+id/btn_udo"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_tr"
+        android:layout_margin="20dp"
+        android:text="@string/undo"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp" />
+</RelativeLayout>

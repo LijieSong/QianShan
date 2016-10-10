@@ -1,0 +1,80 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="StartAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@drawable/welcome_bg</item>
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="text_18_ffffff">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">@color/whites</item>
+    </style>
+
+    <style name="text_16_666666">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="sdw_white">
+        <item name="android:shadowColor">@color/whites</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">0.65</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+
+    <style name="sdw_79351b">
+        <item name="android:shadowColor">@color/cheng_se</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+
+    <style name="text_15_ffffff_sdw" parent="@style/sdw_79351b">
+        <item name="android:textSize">15.0dip</item>
+        <item name="android:textColor">@color/whites</item>
+    </style>
+
+    <style name="text_15_666666_sdw" parent="@style/sdw_white">
+        <item name="android:textSize">15.0dip</item>
+        <item name="android:textColor">@color/whites</item>
+    </style>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <!--<style name="AppTheme.NoActionBar">-->
+        <!--<item_grideview name="windowActionBar">false</item_grideview>-->
+        <!--<item_grideview name="windowNoTitle">true</item_grideview>-->
+    <!--</style>-->
+    <!--<style name="actionBarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">-->
+    <!--</style>-->
+
+    <!--<style name="actionBarPopupTheme" parent="ThemeOverlay.AppCompat.Light">-->
+    <!--</style>-->
+
+    <!--<style name="PhotoPickerTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--<item_grideview name="windowActionBar">false</item_grideview>-->
+        <!--<item_grideview name="windowNoTitle">true</item_grideview>-->
+        <!--<item_grideview name="android:windowBackground">@color/backColor</item_grideview>-->
+        <!--<item_grideview name="actionMenuTextAppearance">@style/ActionMenuTextStyle</item_grideview>-->
+        <!--&lt;!&ndash;<item_grideview name="actionBarTheme">@style/actionBarTheme</item_grideview>&ndash;&gt;-->
+        <!--&lt;!&ndash;<item_grideview name="actionBarPopupTheme">@style/actionBarPopupTheme</item_grideview>&ndash;&gt;-->
+    <!--</style>-->
+    <style name="myschedule_current_month_tv">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+</resources>

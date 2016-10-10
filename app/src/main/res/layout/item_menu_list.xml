@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_menu_list"
+        android:scrollbars="none"
+        android:text="@string/app_name"
+        android:textSize="@dimen/radio_text_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.example.bjlz.qianshan.views.InnerListview
+        android:visibility="gone"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/lv_menuItem"
+        android:dividerHeight="2px"
+        android:divider="@color/devide_line"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

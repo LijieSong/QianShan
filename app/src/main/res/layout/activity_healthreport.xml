@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:my="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.bjlz.qianshan.views.TitleBarView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:background="@color/transparent"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="16sp"
+            android:text="@string/health_report_name"
+            android:gravity="center|left"
+            android:layout_width="0dp"
+            android:layout_weight="1.0"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="16sp"
+            android:text="@string/health_report_status"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1.0"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textSize="16sp"
+            android:text="@string/health_work"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1.0"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:background="@color/devide_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <com.example.bjlz.qianshan.pull.SwipyRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        my:direction="both">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/v7_recyerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.example.bjlz.qianshan.pull.SwipyRefreshLayout>
+</LinearLayout>
